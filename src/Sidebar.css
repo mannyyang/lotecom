@@ -1,0 +1,16 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.speech-actions-list {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  flex: 1;
+}
+
+.speech-actions-list__item {
+  padding: 3px;
+  width: calc(100% / 3);
+}

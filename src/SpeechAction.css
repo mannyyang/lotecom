@@ -1,0 +1,52 @@
+.speech-action {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.speech-action__drag-handle {
+  padding-top: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.speech-action__drag-handle svg {
+  color: #bdc3c7;
+}
+
+.speech-action--border {
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #bdc3c7;
+}
+
+.speech-action__img {
+  height: 65%;
+}
+
+.speech-action__title {
+  font-size: 18px;
+}
+
+.speech-action__translation {
+  font-size: 12px;
+  margin: 10px 0;
+  color: #bdc3c7;
+}
+
+.speech-action__item {
+  background: white;
+}
+
+.speech-action__item .speech-action__title {
+  font-size: 12px;
+}
+
+.speech-action__item .speech-action__img {
+  width: 100%;
+}

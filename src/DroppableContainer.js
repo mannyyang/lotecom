@@ -2,6 +2,8 @@ import React from "react";
 // import { findDOMNode } from "react-dom";
 import { DropTarget } from "react-dnd";
 
+import "./DroppableContainer.css";
+
 // Drag sources and drop targets only interact
 // if they have the same string type.
 // You want to keep types in a separate file with
@@ -26,14 +28,11 @@ const dropTarget = {
     // in response to the hover. You can't handle enter and leave
     // here—if you need them, put monitor.isOver() into collect() so you
     // can just use componentWillReceiveProps() to handle enter/leave.
-
     // You can access the coordinates if you need them
     // const clientOffset = monitor.getClientOffset();
     // const componentRect = findDOMNode(component).getBoundingClientRect();
-
     // You can check whether we're over a nested drop target
     // const isJustOverThisOne = monitor.isOver({ shallow: true });
-
     // You will receive hover() even for items for which canDrop() is false
     // const canDrop = monitor.canDrop();
   },
@@ -76,17 +75,17 @@ function collect(connect, monitor) {
   };
 }
 
-function setDnDBackground(isOver, canDrop) {
-  if (isOver && canDrop) {
-    return "droppable-container--over";
-  } else if (!isOver && canDrop) {
-    return "droppable-container--open animation-stripes";
-  } else if (isOver && !canDrop) {
-    return "red";
-  } else {
-    return "";
-  }
-}
+// function setDnDBackground(isOver, canDrop) {
+//   if (isOver && canDrop) {
+//     return "droppable-container--over";
+//   } else if (!isOver && canDrop) {
+//     return "droppable-container--open";
+//   } else if (isOver && !canDrop) {
+//     return "red";
+//   } else {
+//     return "";
+//   }
+// }
 
 class DroppableContainer extends React.Component {
   componentWillReceiveProps(nextProps) {
@@ -114,9 +113,15 @@ class DroppableContainer extends React.Component {
 
     return connectDropTarget(
       <div
-        className={`${setDnDBackground(isOver, canDrop)} droppable-container`}
+        className={`droppable-container`}
       >
         {this.props.children}
+        {canDrop && (
+          <div className="droppable-container__overlay droppable-container--open" />
+        )}
+        {isOver && (
+          <div className="droppable-container__overlay droppable-container--over" />
+        )}
       </div>
     );
   }

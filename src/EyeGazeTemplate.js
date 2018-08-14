@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import DroppableContainer from "./DroppableContainer";
-import SpeechAction from './SpeechAction';
+import SpeechAction from "./SpeechAction";
 
 class EyeGazeTemplate extends Component {
   render() {
@@ -11,7 +11,10 @@ class EyeGazeTemplate extends Component {
             return (
               <div className="template__placeholder" key={index}>
                 <DroppableContainer position={index} onDrop={this.props.onDrop}>
-                  <SpeechAction speechAction={speechAction} />
+                  <SpeechAction
+                    type={"template-item"}
+                    speechAction={speechAction}
+                  />
                 </DroppableContainer>
               </div>
             );

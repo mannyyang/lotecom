@@ -33,11 +33,11 @@ class SpeechAction extends Component {
         <span className="speech-action__title">
           {isListItem ? speechAction.id : speechAction.title}
         </span>
-        {/* {!isListItem && (
+        {!isListItem && (
           <div className="speech-action__translation">
-            {speechAction.translation}
+            {speechAction.translation && speechAction.translation.korean}
           </div>
-        )} */}
+        )}
       </div>
     );
   }

@@ -8,7 +8,10 @@ class Sidebar extends Component {
   render() {
     return (
       <div className="sidebar">
-        <h1>Symbols</h1>
+        <div className="sidebar__header">
+          <h1 className="sidebar__header-title">Symbols</h1>
+          {this.props.children}
+        </div>
         <div className="speech-actions-list">
           {this.props.availableIcons.map((icon, index) => {
             return (

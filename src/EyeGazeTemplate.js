@@ -14,6 +14,7 @@ class EyeGazeTemplate extends Component {
                   <SpeechAction
                     type={"template-item"}
                     speechAction={speechAction}
+                    language={this.props.language}
                   />
                 </DroppableContainer>
               </div>

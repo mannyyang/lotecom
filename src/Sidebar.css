@@ -3,6 +3,12 @@
   flex-direction: column;
 }
 
+.sidebar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .speech-actions-list {
   display: flex;
   flex-wrap: wrap;

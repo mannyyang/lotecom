@@ -29,6 +29,7 @@ body,
   flex: 1;
   height: 100vh;
   padding: 10px;
+  flex-direction: column;
 }
 
 .template-container {

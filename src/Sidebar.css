@@ -19,4 +19,5 @@
 .speech-actions-list__item {
   padding: 3px;
   width: calc(100% / 3);
+  cursor: pointer;
 }

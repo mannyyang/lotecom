@@ -46,6 +46,10 @@
   background: white;
 }
 
+.speech-action__item:hover {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
 .speech-action__item .speech-action__title {
   font-size: 12px;
 }

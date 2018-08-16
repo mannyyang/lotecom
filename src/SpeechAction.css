@@ -57,8 +57,8 @@
 .speech-action__template-item .speech-action__img {
   position: absolute;
   top: 0;
-  width: auto;
-  height: 70%;
+  max-width: 100%;
+  max-height: 70%;
 }
 
 .speech-action__template-item .speech-action__text {

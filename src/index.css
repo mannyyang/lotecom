@@ -19,11 +19,6 @@ body,
   height: 100%;
 }
 
-.sidebar {
-  width: 350px;
-  padding: 10px;
-}
-
 .eye-gaze-template {
   display: flex;
   flex: 1;

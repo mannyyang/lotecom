@@ -1,5 +1,8 @@
+
 @media print {
-  .sidebar {
+  @page {size: landscape}
+
+  .sidebar, .top-bar {
     display: none;
   }
 }

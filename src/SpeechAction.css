@@ -59,15 +59,13 @@
 }
 
 .speech-action__template-item .speech-action__img {
-  position: absolute;
-  top: 0;
+  width: auto;
   max-width: 100%;
   max-height: 70%;
+  border: 1px solid transparent;
 }
 
 .speech-action__template-item .speech-action__text {
-  position: absolute;
-  bottom: 0;
   width: auto;
   height: 30%;
   text-align: center;
@@ -78,4 +76,9 @@
 
 .speech-action__text--middle {
   justify-content: center;
+}
+
+.speech-action--blank .speech-action__img {
+  max-height: 98%;
+  height: auto;
 }

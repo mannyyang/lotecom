@@ -12,7 +12,7 @@ class EyeGazeTemplate extends Component {
           width="100%"
           height="auto"
           padding={10}
-          marginBottom={20}
+          marginBottom={15}
           className="top-bar"
         >
           <SelectMenu
@@ -28,6 +28,7 @@ class EyeGazeTemplate extends Component {
               <TriangleIcon width="auto" marginLeft={5} aim="down" />
             </Button>
           </SelectMenu>
+          <Button onClick={() => window.print()}>Print</Button>
           <Button float="right" appearance="blue" onClick={this.props.onClear}>Clear</Button>
         </Card>
         <div className="template-container">

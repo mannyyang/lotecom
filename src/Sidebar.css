@@ -1,18 +1,19 @@
 .sidebar {
   display: flex;
   flex-direction: column;
+  width: 350px;
+  padding: 10px;
+  padding-right: 5px;
 }
 
 .sidebar__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 10px 5px;
 }
 
 .speech-actions-list {
   display: flex;
   flex-wrap: wrap;
-  overflow: auto;
+  overflow-y: scroll;
   flex: 1;
 }
 

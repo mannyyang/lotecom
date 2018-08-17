@@ -29,6 +29,10 @@ class App extends Component {
         {
           label: "Spanish",
           value: "spanish"
+        },
+        {
+          label: "Blank",
+          value: "blank"
         }
       ]
     };

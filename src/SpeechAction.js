@@ -42,11 +42,13 @@ class SpeechAction extends Component {
     const { speechAction, type, language } = this.props;
     const isListItem = type === "list-item";
     const isTemplateItem = type === "template-item";
+    const isBlank = language === 'blank';
 
     let cls = "";
-
+    
     isListItem && (cls += " speech-action__item speech-action--border");
     isTemplateItem && (cls += " speech-action__template-item");
+    isBlank && (cls += " speech-action--blank");
 
     return (
       <div className={"speech-action" + cls}>
